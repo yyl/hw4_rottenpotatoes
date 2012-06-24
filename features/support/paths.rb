@@ -19,6 +19,15 @@ module NavigationHelpers
     when /^the edit page for "Alien"$/
       edit_movie_path(Movie.find_by_title("Alien"))
 
+    when /^the details page for "Star Wars"$/
+      movie_path(Movie.find_by_title("Star Wars"))
+
+    when /^the details page for "Alien"$/
+      movie_path(Movie.find_by_title("Alien"))
+
+    when /^the Similar Movies page for "Star Wars"$/
+      search_movie_path(:director =>
+            Movie.find_by_title("Star Wars").director)
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
